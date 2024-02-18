@@ -22,3 +22,50 @@ function getComputerChoice() {
     return computerChoice
  
 }
+
+function playGame() {
+    let playerChoice = getPlayerChoice()
+    let computerChoice = getComputerChoice()
+
+    if (computerChoice == 'rock') {
+        switch (playerChoice) {
+            case 'rock': 
+                console.log(`Tie! You chose ${playerChoice} and your opponent chose ${computerChoice}`)
+                break;
+            case 'paper':
+                console.log(`You win! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                break;
+            case 'scissors':
+                console.log(`You lose! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                break;
+        }
+    }
+
+    if (computerChoice == 'scissors') {
+        switch (playerChoice) {
+            case 'rock': 
+                console.log(`You win! You chose ${playerChoice} and your opponent chose ${computerChoice}`)
+                break;
+            case 'paper':
+                console.log(`You lose! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                break;
+            case 'scissors':
+                console.log(`Tie! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                break;
+        }
+    }
+
+    if (computerChoice == 'paper') {
+        switch (playerChoice) {
+            case 'rock': 
+                console.log(`You lose! You chose ${playerChoice} and your opponent chose ${computerChoice}`)
+                break;
+            case 'paper':
+                console.log(`Tie! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                break;
+            case 'scissors':
+                console.log(`You win! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                break;
+        }
+    }
+}
