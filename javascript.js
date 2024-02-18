@@ -2,7 +2,7 @@
 function getPlayerChoice() {
     let playerChoice = prompt('Rock, paper, or scissors?', ).toLowerCase()
     while (playerChoice != 'rock' && playerChoice != 'scissors' && playerChoice != 'paper') {
-        playerChoice = prompt('Invalid: Enter rock, paper, or scissors')
+        playerChoice = prompt('Invalid: Enter rock, paper, or scissors').toLowerCase()
     }
     return playerChoice
 }
@@ -68,4 +68,5 @@ function playGame() {
                 break;
         }
     }
+    document.getElementById('playButton').textContent = 'Play Again';
 }
