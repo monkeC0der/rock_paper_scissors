@@ -30,13 +30,13 @@ function playGame() {
     if (computerChoice == 'rock') {
         switch (playerChoice) {
             case 'rock': 
-                console.log(`Tie! You chose ${playerChoice} and your opponent chose ${computerChoice}`)
+                document.getElementById('result').textContent =`Tie! You chose ${playerChoice} and your opponent chose ${computerChoice}`
                 break;
             case 'paper':
-                console.log(`You win! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                document.getElementById('result').textContent = `You win! You chose ${playerChoice} and your opponent chose ${computerChoice}`
                 break;
             case 'scissors':
-                console.log(`You lose! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                document.getElementById('result').textContent =`You lose! You chose ${playerChoice} and your opponent chose ${computerChoice}`
                 break;
         }
     }
@@ -44,13 +44,13 @@ function playGame() {
     if (computerChoice == 'scissors') {
         switch (playerChoice) {
             case 'rock': 
-                console.log(`You win! You chose ${playerChoice} and your opponent chose ${computerChoice}`)
+            document.getElementById('result').textContent = `You win! You chose ${playerChoice} and your opponent chose ${computerChoice}`
                 break;
             case 'paper':
-                console.log(`You lose! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                document.getElementById('result').textContent =`You lose! You chose ${playerChoice} and your opponent chose ${computerChoice}`
                 break;
             case 'scissors':
-                console.log(`Tie! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                document.getElementById('result').textContent =`Tie! You chose ${playerChoice} and your opponent chose ${computerChoice}`
                 break;
         }
     }
@@ -58,13 +58,13 @@ function playGame() {
     if (computerChoice == 'paper') {
         switch (playerChoice) {
             case 'rock': 
-                console.log(`You lose! You chose ${playerChoice} and your opponent chose ${computerChoice}`)
+            document.getElementById('result').textContent =`You lose! You chose ${playerChoice} and your opponent chose ${computerChoice}`
                 break;
             case 'paper':
-                console.log(`Tie! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                document.getElementById('result').textContent =`Tie! You chose ${playerChoice} and your opponent chose ${computerChoice}`
                 break;
             case 'scissors':
-                console.log(`You win! You chose ${playerChoice} and your opponent chose ${computerChoice}`) 
+                document.getElementById('result').textContent =`You win! You chose ${playerChoice} and your opponent chose ${computerChoice}`
                 break;
         }
     }
