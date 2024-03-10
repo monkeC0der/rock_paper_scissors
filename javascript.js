@@ -1,8 +1,19 @@
+document.addEventListener("DOMContentLoaded", function() {
+//prompt player for choice to start game
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        console.log(button.id)
+        playGame(button.id)
+    })
+
+})
+
 //prompt user for choice
 function getPlayerChoice() {
     let playerChoice = prompt('Rock, paper, or scissors?', ).toLowerCase()
     while (playerChoice != 'rock' && playerChoice != 'scissors' && playerChoice != 'paper') {
-        playerChoice = prompt('Invalid: Enter rock, paper, or scissors').toLowerCase()
+        playerChoice = prompt('Invalid: Enter rock, paper, or scissors').toLowerCase()  
     }
     return playerChoice
 }
@@ -23,8 +34,7 @@ function getComputerChoice() {
  
 }
 
-function playGame() {
-    let playerChoice = getPlayerChoice()
+function playGame(playerChoice) {
     let computerChoice = getComputerChoice()
 
     if (computerChoice == 'rock') {
@@ -68,5 +78,5 @@ function playGame() {
                 break;
         }
     }
-    document.getElementById('playButton').textContent = 'Play Again';
 }
+})
